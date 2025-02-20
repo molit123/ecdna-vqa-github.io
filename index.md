@@ -2,6 +2,8 @@
 
 ## Introduction
 
+## Data Collection
+
 ## Methods
 
 ## Results
