@@ -35,4 +35,16 @@ By combining these techniques, we aimed to enhance the effectiveness of LLMs in 
 ## Results
 
 ## Conclusion
+
+<!-- Dropdown Menu -->
+<details>
+  <summary>More Information</summary>
+  
+  ### Data Collection
+  Our data is collected from the [ecSeg repository](https://data.mendeley.com/datasets/m7n3zvg539/6), where we use the `train_im` and `test_im` images. Connected component analysis is performed on the images...
+
+  ### Conclusion
+  The use of large language models for ecDNA analysis offers promising results in improving accuracy and automating tasks in pathologic imaging...
+  
+</details>
  
