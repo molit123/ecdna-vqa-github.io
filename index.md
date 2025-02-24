@@ -1,4 +1,3 @@
-<!-- Dropdown Menu with Hamburger Icon -->
 <div class="dropdown">
   <button class="dropdown-btn">&#9776;</button>
   <div class="dropdown-content">
@@ -46,11 +45,24 @@
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
 </style>
+
+<script>
+  // Get the dropdown button and dropdown content
+  const dropdownBtn = document.querySelector('.dropdown-btn');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  // Add an event listener to toggle the dropdown on button click
+  dropdownBtn.addEventListener('click', function() {
+    // Toggle the display property between block and none
+    if (dropdownContent.style.display === 'block') {
+      dropdownContent.style.display = 'none';
+    } else {
+      dropdownContent.style.display = 'block';
+    }
+  });
+</script>
+
 
 ## About
 Extrachromosomal DNA (ecDNA) is a key factor in tumor evolution and resistance to treatment, making its precise identification crucial for cancer diagnostics and prognosis. In our study, we explore the potential of large language models (LLMs) to replace or supplement pathologists in ecDNA identification using DAPI-stained cell images. We integrate MiniCPM, Qwen, and PixTral models into our workflow, leveraging their multimodal capabilities to process and interpret fluorescence microscopy data. Our approach involves N-shot learning and multi-layered prompts to refine model responses and enhance diagnostic accuracy. We evaluate the effectiveness of these models in recognizing ecDNA patterns and assessing their performance against expert pathological annotations. Our findings provide insight into the feasibility of LLM-assisted  pathology and highlight the challenges and advantages of using AI-driven approaches in medical imaging.
