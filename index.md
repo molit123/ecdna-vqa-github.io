@@ -1,3 +1,57 @@
+<!-- Dropdown Menu with Hamburger Icon -->
+<div class="dropdown">
+  <button class="dropdown-btn">&#9776;</button>
+  <div class="dropdown-content">
+    <a href="https://link-to-your-report.com" target="_blank">Report</a>
+    <a href="https://link-to-your-live-demo.com" target="_blank">Live Demo</a>
+  </div>
+</div>
+
+<style>
+  .dropdown {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 100;
+  }
+
+  .dropdown-btn {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    display: block;
+  }
+
+  /* Styling for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
 ## About
 Extrachromosomal DNA (ecDNA) is a key factor in tumor evolution and resistance to treatment, making its precise identification crucial for cancer diagnostics and prognosis. In our study, we explore the potential of large language models (LLMs) to replace or supplement pathologists in ecDNA identification using DAPI-stained cell images. We integrate MiniCPM, Qwen, and PixTral models into our workflow, leveraging their multimodal capabilities to process and interpret fluorescence microscopy data. Our approach involves N-shot learning and multi-layered prompts to refine model responses and enhance diagnostic accuracy. We evaluate the effectiveness of these models in recognizing ecDNA patterns and assessing their performance against expert pathological annotations. Our findings provide insight into the feasibility of LLM-assisted  pathology and highlight the challenges and advantages of using AI-driven approaches in medical imaging.
 ## Introduction
@@ -35,16 +89,4 @@ By combining these techniques, we aimed to enhance the effectiveness of LLMs in 
 ## Results
 
 ## Conclusion
-
-<!-- Dropdown Menu -->
-<details>
-  <summary>More Information</summary>
-  
-  ### Data Collection
-  Our data is collected from the [ecSeg repository](https://data.mendeley.com/datasets/m7n3zvg539/6), where we use the `train_im` and `test_im` images. Connected component analysis is performed on the images...
-
-  ### Conclusion
-  The use of large language models for ecDNA analysis offers promising results in improving accuracy and automating tasks in pathologic imaging...
-  
-</details>
  
