@@ -1,3 +1,4 @@
-theme: jekyll-theme-cayman
+url: https://molit123.github.io
+baseurl: /agency-jekyll-theme/
 title: LLM-Driven Descriptive Analysis of Metaphase Cell Images Containing ecDNA
 paginate: 1
