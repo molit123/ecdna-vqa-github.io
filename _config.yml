@@ -1,3 +1,8 @@
 theme: jekyll-theme-so-simple
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
 title: LLM-Driven Descriptive Analysis of Metaphase Cell Images Containing ecDNA
 paginate: 1
