@@ -65,6 +65,7 @@
 
 ## About
 Extrachromosomal DNA (ecDNA) is a key factor in tumor evolution and resistance to treatment, making its precise identification crucial for cancer diagnostics and prognosis. In our study, we explore the potential of large language models (LLMs) to replace or supplement pathologists in ecDNA identification using DAPI-stained cell images. We integrate MiniCPM, Qwen, and PixTral models into our workflow, leveraging their multimodal capabilities to process and interpret fluorescence microscopy data. Our approach involves N-shot learning and multi-layered prompts to refine model responses and enhance diagnostic accuracy. We evaluate the effectiveness of these models in recognizing ecDNA patterns and assessing their performance against expert pathological annotations. Our findings provide insight into the feasibility of LLM-assisted  pathology and highlight the challenges and advantages of using AI-driven approaches in medical imaging.
+
 ## Introduction
 Our project focuses on analyzing and understanding extra chromosomal DNA (ecDNA). ecDNA exists outside the chromosomes in a cell. Unlike typical chromosomal DNA, which is organized within the chromosomes in the nucleus, ecDNA is typically found as circular pieces of DNA. It can exist in various forms, such as plasmids in bacteria or circular DNA in cancer cells.
 
@@ -73,17 +74,15 @@ In humans, ecDNA is often associated with cancer because it can carry genes that
 There aren't many tools available for analyzing images with ecDNA in detail. Current tools mostly focus on identifying ecDNA and doing basic measurements, but they don’t give information about the structure of ecDNA or analyze metaphase spreads to detect chromosomal abnormalities or genetic diseases. This makes it hard for researchers to fully understand their data and the role of ecDNA.
 
 There are also models that generate text descriptions for general images, but they haven’t been specifically applied to biological images, creating an opportunity for new developments. Our solution aims to use large language models (LLMs) as virtual pathologists. These models will be informed by tools like ecSeg to provide more meaningful and detailed insights which will assist researchers.
+
 ## Data Collection
 Our data is collected from the <a href="https://data.mendeley.com/datasets/m7n3zvg539/6">ecSeg repository</a>, where we use the `train_im` and `test_im` images. Connected component analysis is performed on the images to find the number of nuclei, chromosomes, and ecDNA using the `ndimage` method from the `scipy` library. This process is performed on train and test data, and these counts are then stored in CSV files and used as the truth data.
 
 ### Example Images
-![Actual Image](./images/actual.png)
+The image below is one of thousands that we used to evaluate the LLMs. In the original image, its difficult to
+spot the ecDNA. However, in the colored and segmented images, we can see that the ecDNA patches are much easier to identify since they are highlighted red and white, respectively.
 
-![Colored Image](./images/colored.png)
-
-![Segmented Image](./images/segmentation_image.png)
-
-Actual Image            |  Colored Image            | Segmented Image
+Original Image            |  Colored Image            | Segmented Image
 :-------------------------:|:-------------------------:|:--------------------:                                         
 ![](./images/actual.png)  |  ![](./images/colored.png)  | ![](./images/segmentation_image.png)
 
@@ -109,6 +108,12 @@ Since single-run predictions may be inconsistent or subject to noise, we aggrega
 By combining these techniques, we aimed to enhance the effectiveness of LLMs in supplementing or replacing pathologists for ecDNA analysis. Our methodology provides a structured and adaptive framework for using AI in biomedical imaging tasks.
 
 ## Results
+Seen in the image below are the metrics which measure the performance of each of our models across the various experiments we performed.
+
+![Results Table](./images/results.png)
 
 ## Conclusion
- 
+
+- **Results Summary:** The results show that Pixtral-12B is the best-performing model with respect to MAE and RMSE. Trailed by MiniCPMv2 and then Qwen2-VL, this difference is likely due to the larger context and parameter size of Pixtral allowing it to handle complex queries and produce accurate answers.
+    
+- **Looking Ahead:** In the future, we hope to implement fine-tuning to enhance the accuracy of our best-performing model and reduce dependence on pre-training. Additionally, we hope to eventually use datasets annotated by experts to minimize faulty data.
