@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
 title: LLM-Driven Descriptive Analysis of Metaphase Cell Images Containing ecDNA
-github: false
+github:
+  is_project_page: false
 
