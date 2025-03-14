@@ -83,6 +83,10 @@ Our data is collected from the <a href="https://data.mendeley.com/datasets/m7n3z
 
 ![Segmented Image](./images/segmentation_image.png)
 
+Actual Image            |  Colored Image            | Segmented Image
+:-------------------------:|:-------------------------:|:--------------------:                                         
+![](./images/actual.png)  |  ![](./images/colored.png)  | ![](./images/segmentation_image.png)
+
 ## Methods
 We began by collecting our dataset from the ecSeg repository, which contains high-resolution DAPI-stained cell images annotated for extrachromosomal DNA (ecDNA) detection. Using this dataset, we applied various machine learning techniques to optimize the performance of MiniCPM, Qwen, and PixTral models in analyzing ecDNA patterns. Our approach involved the following techniques:
 
