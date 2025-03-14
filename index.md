@@ -77,7 +77,11 @@ There are also models that generate text descriptions for general images, but th
 Our data is collected from the <a href="https://data.mendeley.com/datasets/m7n3zvg539/6">ecSeg repository</a>, where we use the `train_im` and `test_im` images. Connected component analysis is performed on the images to find the number of nuclei, chromosomes, and ecDNA using the `ndimage` method from the `scipy` library. This process is performed on train and test data, and these counts are then stored in CSV files and used as the truth data.
 
 ### Example Images
+![Actual Image](./images/actual.png)
 
+![Colored Image](./images/colored.png)
+
+![Segmented Image](./images/segmentation_image.png)
 
 ## Methods
 We began by collecting our dataset from the ecSeg repository, which contains high-resolution DAPI-stained cell images annotated for extrachromosomal DNA (ecDNA) detection. Using this dataset, we applied various machine learning techniques to optimize the performance of MiniCPM, Qwen, and PixTral models in analyzing ecDNA patterns. Our approach involved the following techniques:
