@@ -1,8 +1,7 @@
 <div class="dropdown">
   <button class="dropdown-btn">&#9776;</button>
   <div class="dropdown-content">
-    <a href="https://link-to-your-report.com" target="_blank">Report</a>
-    <a href="https://link-to-your-live-demo.com" target="_blank">Live Demo</a>
+    <a href="https://drive.google.com/file/d/1fUlyA04YsPJrzd9bR7hXbBvEN6yPi5TV/view?usp=sharing" target="_blank">Report</a>
   </div>
 </div>
 
