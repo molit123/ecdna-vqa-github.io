@@ -118,4 +118,4 @@ Seen in the image below are the metrics which measure the performance of each of
     
 - **Looking Ahead:** In the future, we hope to implement fine-tuning to enhance the accuracy of our best-performing model and reduce dependence on pre-training. Additionally, we hope to eventually use datasets annotated by experts to minimize faulty data.
 
-You can refer to our <a href="https://drive.google.com/file/d/1fUlyA04YsPJrzd9bR7hXbBvEN6yPi5TV/view?usp=sharing" target="_blank">Report</a> to learn more about our project.
+For more details about our project, please refer to our <a href="https://drive.google.com/file/d/1fUlyA04YsPJrzd9bR7hXbBvEN6yPi5TV/view?usp=sharing" target="_blank">report</a>.
